@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+</head>
+<style>
+
+    html{
+        width: 100%;
+        margin: 0px;
+    }
+    body{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    #Head{
+        width: 100%;
+        height: 15%;
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        font-size: large;
+    }
+    #Head h1{
+        color: rgb(135, 147, 156);
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #Menu{
+        width: 100%;
+        height: 7%;
+        font-size: medium;
+        background-color: #003ba8;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #Menu a{
+        height: 100%;
+        padding-right: 2%;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 26px;
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        align-self: center;
+        justify-content: center;
+    }
+
+    #Menu #About{
+        margin-left: 14%;
+    }
+
+    #PageDescription{
+        position: fixed;
+        display: flex;
+        margin-top: 10%;
+        margin-left: 30px;
+        flex-direction: column;
+        z-index: 11;
+    }
+
+    #PageDescription a{
+        height: 12px;
+        font-size: 14px;
+        border-left: 4px solid rgba(255,255,255,0.4);
+        padding: 0 0 0 10px;
+        margin-bottom: 10px;
+        color: #fff;
+        transition-duration: 200ms;
+        transition-timing-function: linear;
+    }
+    
+
+    #Main{
+        width: 100%;
+        height: 400%;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    #FirstImage{
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    #OurCompany{
+        position: relative;
+        width: 80%;
+        background-color: #fff;
+        margin-top: -44%;
+        margin-bottom: 0px;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 40px;
+        z-index: 10;
+        border-radius: 4px;
+    }
+
+    #OurCompany h1{
+        color: #333;
+        font-size: 34px;
+        font-family: Roboto,Franklin Gothic Medium,Tahoma,sans-serif;
+        font-weight: 400;
+
+        padding-top: 4%;
+
+        text-align: left;
+        margin-left: 8%;
+        margin-right: 70%;
+        margin-bottom: 14px;
+    }
+    #OurCompany hr{
+        width: 8%;
+        line-height: 1px;
+        color: #003ba8; 
+
+        margin-top: 0px;
+        margin-left: 8%;
+        margin-right: 81%;
+        margin-bottom: 14px;
+    }
+    .Paragraph{
+        padding-left: 8%;
+        text-align: left;
+        margin: 0px;
+        font-size: 28px;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #333;
+    }
+    .ButtonImage{
+        height: 500px;
+        width: auto;
+    }
+
+    #Solutions{
+        position: relative;
+        width: 40%;
+        z-index: 10;
+        background-color: #222;
+        padding-top: 65px;
+        padding-bottom: 65px;
+        padding-left: 30%;
+        padding-right: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 992px){
+        #Solutions{
+            flex-direction: column;
+        }
+    }
+    
+    #Solutions h1{
+        color: #999;
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-size: 39px;
+        text-align: left;
+        margin-top: 0px;
+    }
+
+    #Solutions pre{
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-weight: 300;
+        font-size: 28px;
+        text-align: left;
+        color: #fff;
+        
+    }
+    
+    #ERPImage{
+        width: 30vw;
+        height: auto;
+    }
+
+    @media only screen and (orientation: portrait){
+        #ERPImage{
+            width: 60vw;
+        }
+    }
+
+    #OurServices{
+        position: relative;
+        width: 80%;
+        z-index: 10;
+        background-color: #222;
+        padding-top: 65px;
+        padding-bottom: 65px;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+    }
+
+    #OurServices hr{
+        height: 2px;
+        border-width: 0px;
+        background: linear-gradient(to right, #222, #333, #222);
+    }
+
+    #OurServices h1{
+        color: #999;
+        text-align: center;
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-size: 39px;
+    }
+
+    #OurServices #ServiceList{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #OurServices img{
+        height: 100px;
+        transition-duration: 500ms;
+    }
+
+    #ServiceList #Service1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    #Service1 a{
+        color: #666;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+    }
+
+    #Service1:hover img{
+        height: 120px;
+    }
+
+    #Service1:hover a{
+        color: #fff;
+    }
+
+</style>
+
+<html>
+    <body id="body">
+        <div id="Head">
+            <img href="">
+            <h1>Hover</h1>
+        </div>
+
+        <div id="Menu">
+            <a id="About" href="#About">About Hover</a>
+            
+            <a id="Services" href="#Services">Services</a>
+            <a id="Solution" href="#Solution">Solution</a>
+            <a id="Developers" href="#Developers">Developers</a>
+            <a id="Partners" href="#Partners">Partners</a>
+        </div>
+
+        <nav id="PageDescription">
+            <a id="DotOurCompany">Our Company</a>
+            <a id="DotOurService">Our services</a>
+            <a id="DotOurTeam">Our Team</a>
+        </nav>
+
+        <div id = "Main">
+            <img id="FirstImage" src="./pexels-photo-574071.webp">
+            <div id="OurCompany">
+                <h1>關於我們</h1>
+                <hr/>
+                <pre class="Paragraph">
+Our Company blah blah 
+blah blah blah blah 
+blah blah blah blah blah 
+blah blah blah blah</pre>
+
+            </div>
+            <div id="Solutions">
+                <div>
+                    <h1>解決方案</h1>
+                    <pre>
+我們提供全方位ERP解決方案,
+根據你的需求、你的進度, 
+以你最適合的方式推動轉型升級        
+</pre>
+                </div>
+               
+                <img id="ERPImage" src="./erp-grafico-1200x1181.png">
+            </div>
+            <div id="OurServices">
+                <hr/>
+                <h1>我們的服務</h1>
+                <div id="ServiceList">
+                    <div id="Service1">
+                        <a href="#Cloud">
+                            <img src="./cloud.png" href="#Cloud">
+                        </a>
+                        <a href="#Cloud">Cloud</a>
+                    </div>
+                    <div id="Service1">
+                        <a href="#Consulting">
+                            <img src="./pngwing.com.png" href="#Consulting">
+                        </a>
+                        <a href="#Consulting">Consulting</a>
+                    </div>
+                    <div id="Service1">
+                        <a href="#Maintenance">
+                            <img src="./api-1857236839.png" href="#Maintenance">
+                        </a>
+                        <a href="#Maintenance">Maintenance</a>
+                    </div>
+                    <div id="Service1">
+                        <a href="#Maintenance">
+                            <img src="./upgrade-icon-png-18-688343866.png" href="#Maintenance">
+                        </a>
+                        <a href="#Maintenance">Upgrade</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    
+    <script src="./home.js"></script>
+</html>
