@@ -20,18 +20,64 @@
         width: 100%;
         height: 15%;
         margin: 0px;
-        text-align: center;
+
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
         
         font-size: large;
     }
     #Head h1{
+        width: 20%;
+        margin-left: 40%;
+        text-align: center;
         color: rgb(135, 147, 156);
         font-family: 'Times New Roman', Times, serif;
     }
+
+    #Head #HeadSearchBox{
+        max-height: 15%;
+        margin-left: 20%;
+        border: 1px solid #bbb;
+        display: flex;
+    }
+
+    @media only screen and (orientation:portrait){
+        #Head #HeadSearchBox{
+            display: none;
+        }
+    }
+
+    #Head #HeadSearchBox input{
+        border: none;
+        outline: 0;
+        padding: 0;
+        margin-left: 12px;
+        margin-right: 10px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        font-family: Roboto,"Franklin Gothic Medium",Tahoma,sans-serif;
+        font-size: 16px;
+        color: #555;
+    }
+
+    #Head #HeadSearchBox button{
+        width: 34px;
+        height: 34px;
+        border: none;
+        outline: 0;
+        background-color: #fff;
+        justify-content: center;
+    }
+    #Head #HeadSearchBox button img{
+        margin-top: 5px;
+        width: 80%;
+    }
+
+    #Head #HeadSearchBox button:hover{
+        background-color: #ddd;
+    }
+
     #Menu{
         width: 100%;
         height: 7%;
@@ -85,7 +131,7 @@
         width: 100%;
         height: 400%;
         text-align: center;
-        background-color: #fff;
+        background-color: #222;
     }
 
     #FirstImage{
@@ -160,7 +206,7 @@
         align-items: center;
     }
 
-    @media only screen and (max-width: 992px){
+    @media only screen and (orientation: portrait){
         #Solutions{
             flex-direction: column;
         }
@@ -172,7 +218,18 @@
         font-size: 39px;
         text-align: left;
         margin-top: 0px;
+        animation: fadein 1s;
     }
+
+    @keyframes fadein{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
 
     #Solutions pre{
         font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
@@ -254,6 +311,126 @@
     #Service1:hover a{
         color: #fff;
     }
+    
+    #WhatIsERPImg{
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    @media only screen and (orientation: portrait){
+        #WhatIsERPImg{
+            width: 140%;
+            margin-left: -40%;
+        }
+    }
+
+    #WhatIsERP{
+        position: relative;
+        margin-top: -40%;
+        margin-left: 52%;
+        margin-right: 8%;
+        margin-bottom: 0px;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-left: 2%;
+        padding-right: 2%;
+        z-index: 11;
+        background-image: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1), rgba(255,255,255,0));
+    }
+
+    @media only screen and (orientation: portrait){
+        #WhatIsERP{
+            margin-top: -62%;
+            margin-left: 40%;
+            padding-top: 4%;
+            padding-bottom: 3%;
+        }
+    }
+
+    #WhatIsERP h1{
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        color: #fff;
+    }
+    #WhatIsERP p{
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-weight: 300;
+        font-size: 26px;
+        color: #fff;
+    }
+
+    #Automation{
+        background-color: #222;
+        text-align: center;
+        margin: 0px;
+        padding-top: 120px;
+        padding-bottom: 65px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #Automation h1{
+        color: #999;
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-size: 39px;
+        text-align: center;
+        animation: fadein 1s;
+    }
+
+    #Automation #AutomationList{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    #Automation #AutomationList div{
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Automation #AutomationList img{
+        width: 140px
+    }
+
+    #Automation #AutomationList a{
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+    }
+
+    #OurTeamImg{
+        position: relative;
+        width: 100vw;
+        height: 47vw;
+        z-index: 1;
+    }
+
+    #OurTeam{
+        max-height: 40vw;
+        position: relative;
+        z-index: 11;
+        margin-top: -48%;
+        margin-left: 40%;
+        margin-bottom: 0px;
+        padding-top: 4%;
+    }
+
+    #OurTeam h1{
+        font-family: "Microsoft JhengHei",Arial,Helvetica,sans-serif;
+        font-weight: 600;
+        color: #333;
+    }
 
 </style>
 
@@ -262,12 +439,18 @@
         <div id="Head">
             <img href="">
             <h1>Hover</h1>
+            <div id="HeadSearchBox">
+                <input autocomplete="false" role="combobox" placeholder="Search">
+                <button>
+                    <img src="./698627-icon-111-search-512-3503853954.png">
+                </button>
+            </div>
         </div>
 
         <div id="Menu">
             <a id="About" href="#About">About Hover</a>
             
-            <a id="Services" href="#Services">Services</a>
+            <a id="Services" href="#OurServices">Services</a>
             <a id="Solution" href="#Solution">Solution</a>
             <a id="Developers" href="#Developers">Developers</a>
             <a id="Partners" href="#Partners">Partners</a>
@@ -315,7 +498,7 @@ blah blah blah blah</pre>
                     </div>
                     <div id="Service1">
                         <a href="#Consulting">
-                            <img src="./pngwing.com.png" href="#Consulting">
+                            <img src="./profile-modified.png" href="#Consulting">
                         </a>
                         <a href="#Consulting">Consulting</a>
                     </div>
@@ -334,8 +517,54 @@ blah blah blah blah</pre>
                 </div>
                 
             </div>
+            <img id="WhatIsERPImg" src="./banner-feature-63-4249403565(1).jpg">
+            <div id="WhatIsERP">
+                <h1>企業資源規劃 (ERP)</h1>
+                <p>
+                    企業資源規劃 (ERP) 是企業用以管理日常業務活動的一種軟體，例如會計、採購、專案管理、風險管理與合規以及供應鏈運作。
+                </p>
+                <p>
+                    ERP 系統將多項業務流程結合在一起,實現各個流程間的資料流。ERP 系統收集來自多個來源的組織共用交易資料，避免了資料重複，並透過單一事實來源提供資料完整性。
+                </p>
+            </div>
+
+            <div id="Automation">
+                <h1>自動化流程</h1>
+                <div id="AutomationList">
+                    <div>
+                        <img src="./147_-_Pie_Chart-1024-1635521995.png" style="width:140px;">
+                        <a>財務管理與分析</a>
+                    </div>
+                    <div>
+                        <img src="./supplychain-icon-1277518500.png" style="width:115px;margin-top: 10px;margin-bottom: 14px;">
+                        <a>供應鏈管理</a>
+                    </div>
+                    <div>
+                        <img src="./iot-icon-hover-63717590.png" style="padding-bottom: 24px;">
+                        <a>IoT 物聯網 </a>
+                    </div>
+                    <div>
+                        <img src="./human-resources-icon-png-12-3087814422.png">
+                        <a>人力資源管理</a>
+                    </div>
+                </div>
+                <div id="AutomationList">
+                    <div>
+                        <img src="./ai-package-icon-blue-3020367755.png">
+                        <a>AI 機器學習</a>
+                    </div>
+                    <div>
+                        <img src="./handshake-clipart-5-3722766013(1).png" style="width:150px;margin-top: 20px;margin-bottom: 30px;">
+                        <a>CRM 客戶關係管理</a>
+                    </div>
+                </div>
+            </div>
+            
+            <img id="OurTeamImg" src="./team(1).jpg">
+            <div id="OurTeam">
+                <h1>我們的團隊</h1>
+            </div>
         </div>
     </body>
     
-    <script src="./home.js"></script>
 </html>
