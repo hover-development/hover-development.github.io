@@ -45,7 +45,55 @@
      inkscape:window-x="0"
      inkscape:window-y="34"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2" /><path
+     inkscape:current-layer="svg2" />
+     <rect width="100%" height="100%" fill="#222" />
+     <style>
+      path {
+        fill: #fff;
+        transition: 100ms;
+      }
+      path:hover {
+        fill: #3b729f;
+      }
+
+      .reaching_arc{
+        fill:none;
+        stroke: red;
+        stroke-width: red;
+      }
+
+      #taiwan {
+        fill: #00cc66;
+        transition: 100ms;
+      }
+      #taiwan:hover {
+        fill: green;
+      }
+
+      #canada {
+        fill: #00cc66;
+        transition: 100ms;
+      }
+      #canada:hover {
+        fill: green;
+      }
+      
+      #britain {
+        fill: #00cc66;
+        transition: 100ms;
+      }
+      #new\ zealand\ south\ island {
+        fill: #00cc66;
+        transition: 100ms;
+      }
+
+      #australia {
+        fill: #00cc66;
+        transition: 100ms;
+      }
+     </style>
+     <path
+     fill="#fff"
      id="kalimantan"
      d="M781.68,324.4l-2.31,8.68l-12.53,4.23l-3.75-4.4l-1.82,0.5l3.4,13.12l5.09,0.57l6.79,2.57v2.57l3.11-0.57l4.53-6.27v-5.13l2.55-5.13l2.83,0.57l-3.4-7.13l-0.52-4.59L781.68,324.4L781.68,324.4z" /><path
      id="papua new guinea"
@@ -723,4 +771,7 @@
      id="thrace"
      d="M523.02,209.7l-0.16,3.55l3.1-0.95l1.42-0.95l-0.42-1.54l-1.47-1.17L523.02,209.7L523.02,209.7z" /><path
      id="crete"
-     d="M516.76,230.59l1.63,0.05l0.68,1.01h2.37l1.58-0.58l0.53,0.64l-1.05,1.38l-4.63,0.16l-0.84-1.11l-0.89-0.53L516.76,230.59L516.76,230.59z" /></svg>
+     d="M516.76,230.59l1.63,0.05l0.68,1.01h2.37l1.58-0.58l0.53,0.64l-1.05,1.38l-4.63,0.16l-0.84-1.11l-0.89-0.53L516.76,230.59L516.76,230.59z" />
+     
+     <!--path class="reaching_arc" d=" M 786 254 A 180 120 0 0 0 280 180" /></!-->
+     </svg>
